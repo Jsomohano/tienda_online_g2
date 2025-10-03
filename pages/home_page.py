@@ -4,12 +4,19 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
+from pages.base_page import BasePage
 
-class HomePage:
+
+#Herencia
+#Polimorfismo
+#Encapsulamiento
+#Abstraccion
+
+class HomePage(BasePage):
     
 ## Constructor
     def __init__(self, driver):
-        self.driver = driver
+        super().__init__(driver)
 
 
 ## Atributos (Locators)
@@ -20,10 +27,10 @@ class HomePage:
 
 ## Metodos (Interacciones con los elementos web)
     def click_sign_in(self):
-        self.driver.find_element(*self.sign_in_button).click()
-        
+        self.click_element(self.sign_in_button)
+                
     def click_cart(self):
-        self.driver.find_element(*self.cart_button).click()
+        self.click_element(self.cart_button)
         
         
         

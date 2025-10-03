@@ -30,5 +30,3 @@ def test_prueba1():
     
     print("Test finalizado")
     
-
-    
