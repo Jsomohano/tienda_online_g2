@@ -27,7 +27,7 @@ class HomePage(BasePage):
 
 ## Metodos (Interacciones con los elementos web)
     def click_sign_in(self):
-        self.click_element(self.sign_in_button)
+        self.click_element(self.sign_in_button,5)
                 
     def click_cart(self):
         self.click_element(self.cart_button)
